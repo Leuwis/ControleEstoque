@@ -1,0 +1,401 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --azul-principal: #005288;
+    --fundo-janela: #ccc;
+}
+body{
+    overflow: hidden;
+}
+/* .teste{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+} */
+.menuPrincipal{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    width: 20%;
+    z-index: 1000 !important;
+}
+.ocultar{
+    position: absolute;
+    transition: all 0.3s;
+    left: -210px !important;
+}
+
+.menuItems{
+    background-color: #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: inherit;
+    width: 210px;
+}
+.btnMenuItem{
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px 15px;
+    background-color: #888;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    width: 170px;
+    text-decoration: none;
+    text-align: center;
+}
+.btnMenuPrincipal{
+    display: flex;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.principal{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.fPrincipal{
+    z-index: 1 !important;
+    width: inherit;
+    height: 100vh;
+    overflow: auto !important;
+    border: none;
+}
+
+input{
+    background-color: #fff;
+}
+
+/* -------------------------------------------------- FORMATAÇÃO DE GRIDS --------------------------------------------- */
+
+.areaGrid{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+   
+}
+
+.grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: inherit;
+}
+.tituloGrid{
+    display: flex;
+    background-color: var(--azul-principal);
+    flex-direction: row;
+    color: #fff;
+    width: 60%;
+}
+.colunaTituloGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+
+}
+.dadosGrid{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 60%;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto !important;
+}
+
+.linhaGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.linhaGrid:nth-child(even){
+    background-color: #bbb;
+}
+
+.linhaGrid:nth-child(odd){
+    background-color: #fff;
+}
+
+.linhaGrid:hover{
+    background-color: #0ac !important;
+    color: #fff !important;
+}
+
+.ocultarLinhaGrid{
+    display: none !important;
+}
+
+.colunaLinhaGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------- TOPO DA JANELA ----------------------------------- */
+.topoJanela{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+/* ------------------------------- BOTÃO DE OPERAÇÃO PRINCIPAL -------------------- */
+
+.btnMainOper{
+    cursor: pointer;
+    background-color: var(--azul-principal);
+    border-radius: 10px;
+    padding: 5px;
+    width: 30px;
+}
+
+
+/* ----------------------------------- JANELA NOVO ------------------------------------- */
+.popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.75);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+}
+.janelaPopup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+.tituloPopup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: var(--azul-principal);
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+    width: inherit;
+}
+.corpoPopup{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--fundo-janela);
+    width: inherit;
+    padding: 5px;
+}
+.campoForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.campoForm2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.ocultarElemento{
+    display: none;
+}
+
+.filtragem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px;
+}
+
+.pesquisar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.campoFiltragem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.inputFiltragem{
+    border: 2px solid #888 !important;
+    border-radius: 5px;
+}
+
+.campoForm input, .campoForm select, .campoForm div{
+    padding: 5px;
+    border-radius: 5px;
+    width: inherit;
+    border: none;
+}
+
+.campoForm div{
+    margin-top: 4px;
+}
+
+.rodapePopup{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: inherit;
+    background-color: var(--azul-principal);
+    color: #fff;
+    padding: 5px;
+    border-radius: 0px 0px 5px 5px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btnJanelaOper{
+    width: 20px;
+    cursor: pointer;
+}
+
+.btnComandoPopup{
+    background-color: rgb(31, 31, 209);
+    color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.ocultarPopup{
+    opacity: 0 !important;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.telefones{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.tel{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    width: 150px !important;
+}
+
+.numTel{
+    background-color: #888 !important;
+    padding: 5px;
+    border-radius: 5px 0px 0px 5px !important;
+    border: 5px;
+    width: 150px !important;
+}
+.delTel{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #333 !important;
+    border-radius: 0px 5px 5px 0px !important;
+    cursor: pointer; 
+    height: 28px;
+    width: 30px !important;
+}
+.imgDelTel{
+    height: 25px;
+}
+
+/* ------------------------------------------------------------------------- CAIXA MSG ------------------------------------------------------------ */
+
+.cxMsgFundo{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+.cxMsg{
+    width: 400px;
+}
+.tituloCxMsg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #22f !important;
+    color: #fff;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px;
+    
+}
+.corpoCxMsg{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #aaa;
+    padding: 20px 5px;
+}
+.rodapeCxMsg{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: #777 !important;
+    border-radius: 0px 0px 5px 5px;
+}
+.btnFecharCxMsg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f00;
+    width: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.btnCxMsg{
+    background-color: #aaa;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    border: none;
+}

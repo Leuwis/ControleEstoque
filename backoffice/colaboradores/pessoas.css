@@ -1,0 +1,32 @@
+body{
+    overflow: hidden !important;
+    z-index: 999999;
+}
+.c1{
+    width: 20%;
+}
+.c2{
+    width: 30%;
+}
+.c3{
+    width: 20%;
+}
+.c4{
+    width: 15%;
+}
+.c5{
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons{
+    width: 27px;
+    cursor: pointer;
+}
+
+.imgFoto{
+    width: 75px;
+    height: 100px;
+    border: 1px solid #888;
+    border-radius: 5px;
+}

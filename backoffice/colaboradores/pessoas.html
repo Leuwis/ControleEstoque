@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../estoque_geral.css">
+    <link rel="stylesheet" href="pessoas.css">
+    <title>Pessoas</title>
+</head>
+<body>
+    <div id="topoJanela" class="topoJanela">
+        <div></div>
+
+        <div>
+            <img src="../../recursos/list all.svg" alt="" id="limparFiltragem" class="btnMainOper" title="limpar filtragem">
+            <img src="../../recursos/search.svg" alt="" id="pesquisarPessoa" class="btnMainOper" title="pesquisar Pessoa">
+            <img src="../../recursos/add.svg" alt="" id="adicionarPessoa" class="btnMainOper" title="adicionar Pessoa">
+        </div>
+    </div>
+
+    <div id="filtragem" class="filtragem">
+        <div class="campoForm campoFiltragem">
+            <label>Filtrar Nome</label>
+            <input type="text" id="fFiltragem" name="fFiltragem" class="inputFiltragem">
+        </div>
+    </div>
+
+   
+
+    <div id="novaPessoa" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopup">Nova Pessoa</div>
+                <img src="../../recursos/close.svg" class="btnJanelaOper" id="btnFechar">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Nome Pessoa</label>
+                    <input type="text" id="fNome" name="fNome">
+                </div>
+                <div class="campoForm">
+                    <label>Tipo</label>
+                    <Select id="fTipo" class="fTipo">
+                    </Select>
+                </div>
+                <div class="campoForm">
+                    <label>Status</label>
+                    <select type="text" id="fStatus" name="fStatus">
+                        <option value="a">Ativo</option>
+                        <option value="d">Desligado</option>
+                    </select>
+                </div>
+                <div class="campoForm">
+                    <label>Foto</label>
+                    <input type="file" accept="image/png, image/jpeg, image/jpg" id="fFoto" name="fFoto">
+                </div>
+                <div class="campoForm2">
+                    <img src="" id="imgFoto" class="imgFoto">
+                </div>
+                <div class="campoForm">
+                    <label>Telefones</label>
+                    <input type="number" id="fTelefone" name="fTelefone">
+                    <div id="telefones" class="telefones">
+                    </div>
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btnGravarPopup" class="btnComandoPopup">Gravar</button>
+                <button id="btnCancelarPopup" class="btnComandoPopup">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="areaGrid" class="areaGrid">
+        <div id="grid" class="grid">
+            <div id="tituloGrid" class="tituloGrid">
+                <div class="colunaTituloGrid c1">ID</div>
+                <div class="colunaTituloGrid c2">Nome</div>
+                <div class="colunaTituloGrid c3">Tipo</div>
+                <div class="colunaTituloGrid c4">Status</div>
+                <div class="colunaTituloGrid c5">Operações</div>
+            </div>
+            <div id="dadosGrid" class="dadosGrid">
+                 <!-- <div id="linhaGrid" class="linhaGrid">
+                    <div class="colunaLinhaGrid c1">ID</div>
+                    <div class="colunaLinhaGrid c2">Nome</div>
+                    <div class="colunaLinhaGrid c3">Tipo</div>
+                    <div class="colunaLinhaGrid c4">Status</div>
+                    <div class="colunaLinhaGrid c5">Operações</div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="popupPesquisa" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            
+            <div class="tituloPopup">
+                <div id="tituloPopup">Pesquisar</div>
+                <img src="../../recursos/close.svg" class="btnJanelaOper" id="btnFecharPesquisa">
+            </div>
+            <div class="corpoPopup">
+                <div class="pesquisar">
+                    <div>
+                       <input type="radio" id="fPesquisaId" value="id" name="opPesquisa" checked>  ID 
+                    </div>
+                    <div>
+                        <input type="radio" id="fPesquisaNome" value="nome" name="opPesquisa"> Nome 
+                    </div>
+                </div>
+                <div class="campoForm">
+                    <input type="text"  id="fPesquisa">
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btnPesquisar" class="btnComandoPopup">Pesquisar</button>
+            </div>
+        <div>     
+    </div> 
+
+    <script src="../../estoque_geral.js"></script>
+    <script src="pessoas.js" type="module"></script>
+</body>
+</html>

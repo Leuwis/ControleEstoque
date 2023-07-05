@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../estoque_geral.css">
+    <link rel="stylesheet" href="fornecedores.css">
+    <title>Fornecedores</title>
+</head>
+<body>
+    <div id="topoJanela" class="topoJanela">
+        <div></div>
+
+        <div>
+            <img src="../../recursos/list all.svg" alt="" id="limparFiltragem" class="btnMainOper" title="limpar filtragem">
+            <img src="../../recursos/search.svg" alt="" id="pesquisarColaborador" class="btnMainOper" title="pesquisar colaborador">
+            <img src="../../recursos/add.svg" alt="" id="adicionarFornecedor" class="btnMainOper" title="adicionar colaborador">
+        </div>
+    </div>
+
+    <div id="filtragem" class="filtragem">
+        <div class="campoForm campoFiltragem">
+            <label>Filtrar Nome</label>
+            <input type="text" id="fFiltragem" name="fFiltragem" class="inputFiltragem">
+        </div>
+    </div>
+
+   
+
+    <div id="listaContatos" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopup">Contatos</div>
+                <img src="../../recursos/close.svg" class="btnJanelaOper" id="btnFecharContatos">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Grid Contatos</label>
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btnPesquisarContatosForn" class="btnComandoPopup">Pesquisar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="novoFornecedor" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopup">Novo Fornecedor</div>
+                <img src="../../recursos/close.svg" class="btnJanelaOper" id="btnFechar">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Nome Fornecedor</label>
+                    <input type="text" id="fNome" name="fNome">
+                </div>
+                <div class="campoForm">
+                    <label>Status</label>
+                    <select type="text" id="fStatus" name="fStatus">
+                        <option value="a">Ativo</option>
+                        <option value="d">Desligado</option>
+                    </select>
+                </div>
+                <div class="campoForm">
+                    <label>Foto</label>
+                    <input type="file" accept="image/png, image/jpeg, image/jpg" id="fFoto" name="fFoto">
+                </div>
+                <div class="campoForm2">
+                    <img src="" id="imgFoto" class="imgFoto ">
+                </div>
+                <div class="campoForm">
+                    <button id="btnListarContatos" class="btnComandoPopup">Listar contatos</button>
+                </div>
+                <div class="campoForm">
+                    <div id="gridContatosForn">
+                        
+                    </div>               
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btnGravarPopup" class="btnComandoPopup">Gravar</button>
+                <button id="btnCancelarPopup" class="btnComandoPopup">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="areaGrid" class="areaGrid">
+        <div id="grid" class="grid">
+            <div id="tituloGrid" class="tituloGrid">
+                <div class="colunaTituloGrid c1">ID</div>
+                <div class="colunaTituloGrid c2">Nome</div>
+                <div class="colunaTituloGrid c3">Status</div>
+                <div class="colunaTituloGrid c4">Operações</div>
+            </div>
+            <div id="dadosGrid" class="dadosGrid">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="popupPesquisa" class="popup ocultarPopup">
+        <div class="janelaPopup">
+
+            <div class="tituloPopup">
+                <div id="tituloPopup">Pesquisar</div>
+                <img src="../../recursos/close.svg" class="btnJanelaOper" id="btnFecharPesquisa">
+            </div>
+            <div class="corpoPopup">
+                <div class="pesquisar">
+                    <div>
+                       <input type="radio" id="fPesquisaId" value="id" name="opPesquisa" checked>  ID 
+                    </div>
+                    <div>
+                        <input type="radio" id="fPesquisaNome" value="nome" name="opPesquisa"> Nome 
+                    </div>
+                </div>
+                <div class="campoForm">
+                    <input type="text"  id="fPesquisa">
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btnPesquisar" class="btnComandoPopup">Pesquisar</button>
+            </div>
+        <div>     
+    </div> 
+
+    <script src="../../estoque_geral.js"></script>
+    <script src="fornecedores.js" type="module"></script>
+</body>
+</html>
+
